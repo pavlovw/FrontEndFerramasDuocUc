@@ -1,0 +1,103 @@
+.home-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* PRIMERA FILA */
+.first-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 40px; /* controla la distancia hacia la segunda fila */
+    gap: 20px; /* controla qué tan cercanos o separados están */
+}
+
+.first-row .left-column,
+.first-row .right-column {
+    flex: 1;
+}
+
+.welcome-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.description-text {
+    font-size: 1.2rem;
+    margin: 0;
+    text-align: right;
+}
+
+/* SEGUNDA FILA */
+.second-row {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.second-row form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.second-row label {
+    white-space: nowrap;
+    margin-right: 10px;
+}
+
+.second-row input[type="email"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.second-row input[type="submit"] {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.second-row input[type="submit"]:hover {
+    background-color: #3a3a3a;
+}
+
+/* TERCERA FILA */
+.third-row {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 20px 40px; /* agrega espacio desde el borde derecho */
+    margin-top: 40px; /* controla distancia desde arriba */
+    margin-bottom: 40px; /* controla si lo quieres más abajo */
+}
+
+.third-row .social-section {
+    text-align: right;
+}
+
+.social-section p {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
