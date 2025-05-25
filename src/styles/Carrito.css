@@ -1,0 +1,237 @@
+/* CONTENEDOR PRINCIPAL */
+.carrito-container {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  padding: 2.5rem;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* COLUMNA IZQUIERDA */
+.carrito-productos {
+  flex: 1;
+  min-width: 360px;
+  max-width: 600px;
+  border-right: 2px solid #e0e0e0;
+  padding-right: 2rem;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.carrito-productos h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  padding: 1rem 0;
+  z-index: 2;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.carrito-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.carrito-item {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.carrito-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+.carrito-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.carrito-info h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #34495e;
+}
+
+.carrito-info p {
+  margin: 0;
+  color: #555;
+}
+
+.boton-eliminar {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.boton-eliminar:hover {
+  background-color: #c0392b;
+}
+
+/* COLUMNA DERECHA */
+.carrito-resumen {
+  flex: 1;
+  min-width: 340px;
+  max-width: 400px;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.carrito-total-titulo {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  color: #2c3e50;
+}
+
+.carrito-total-cuadro {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 1.2rem 2.2rem;
+  font-size: 1.8rem;
+  border-radius: 14px;
+  min-width: 220px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* BOTONES */
+.carrito-botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.boton-verde {
+  background-color: #2ecc71;
+  color: white;
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.boton-verde:hover {
+  background-color: #27ae60;
+}
+
+.boton-celeste {
+  background-color: #3498db;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+  transition: background 0.3s;
+}
+
+.boton-celeste:hover {
+  background-color: #2980b9;
+}
+
+.carrito-descuento {
+  font-style: italic;
+  font-size: 0.9rem;
+  text-align: center;
+  color: #3498db;
+}
+
+/* TRANSFERENCIA */
+.carrito-transferencia {
+  margin-top: 2rem;
+  background-color: #f9f9f9;
+  padding: 1.8rem;
+  border-radius: 12px;
+  border-left: 5px solid #3498db;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  color: #333;
+}
+
+.transferencia-header {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #3498db;
+}
+
+.circulo-celeste {
+  width: 16px;
+  height: 16px;
+  background-color: #3498db;
+  border-radius: 50%;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .carrito-container {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .carrito-productos,
+  .carrito-resumen {
+    padding: 0;
+    border: none;
+    max-width: 100%;
+  }
+
+  .carrito-productos {
+    border-bottom: 2px solid #eee;
+    margin-bottom: 2rem;
+  }
+
+  .carrito-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .carrito-total-cuadro {
+    font-size: 1.5rem;
+  }
+}
+
+
+.carrito-total-cuadro.descuento {
+    background-color: #e0ffe0;
+    border: 2px solid #3cba54;
+    font-weight: bold;
+}

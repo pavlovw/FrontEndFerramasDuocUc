@@ -1,103 +1,140 @@
-.home-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px 20px;
+/* Contenedor principal - altura completa pantalla, sin scroll vertical */
+.home-wrapper-suscribe {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* espacio entre secciones */
+  padding: 40px 60px;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
-/* PRIMERA FILA */
-.first-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    margin-bottom: 40px; /* controla la distancia hacia la segunda fila */
-    gap: 20px; /* controla qué tan cercanos o separados están */
+/* SECCIÓN 1: título y texto alineados horizontalmente */
+.section-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-height: 0;
 }
 
-.first-row .left-column,
-.first-row .right-column {
-    flex: 1;
+.section-1-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  gap: 40px;
 }
 
-.welcome-title {
-    font-size: 2rem;
-    font-weight: bold;
-    margin: 0;
+.welcome-title-suscribe {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  flex-shrink: 0;
 }
 
-.description-text {
-    font-size: 1.2rem;
-    margin: 0;
-    text-align: right;
+.description-text-suscribe {
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: right;
+  flex-shrink: 0;
+  color: #333;
+  width: 50%;
 }
 
-/* SEGUNDA FILA */
-.second-row {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 40px;
+/* SECCIÓN 2: formulario centrado vertical y horizontal */
+.section-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  min-height: 0;
 }
 
-.second-row form {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
+.form-suscribe {
+  width: 100%;
+  max-width: 700px;
+  font-size: 24px;
 }
 
-.second-row label {
-    white-space: nowrap;
-    margin-right: 10px;
+.form-suscribe label {
+  display: block;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
-.second-row input[type="email"] {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.input-button-wrapper {
+  display: flex;
+  gap: 15px;
 }
 
-.second-row input[type="submit"] {
-    padding: 10px 20px;
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.input-button-wrapper input[type="email"] {
+  flex: 1;
+  padding: 14px 15px;
+  font-size: 1.5rem;
+  border: 3px solid black;
 }
 
-.second-row input[type="submit"]:hover {
-    background-color: #3a3a3a;
+.btn-submit {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
-/* TERCERA FILA */
-.third-row {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    padding: 20px 40px; /* agrega espacio desde el borde derecho */
-    margin-top: 40px; /* controla distancia desde arriba */
-    margin-bottom: 40px; /* controla si lo quieres más abajo */
+.btn-submit:hover {
+  background-color: #222;
 }
 
-.third-row .social-section {
-    text-align: right;
+/* SECCIÓN 3: redes sociales alineadas a la derecha, alineado vertical con texto derecho sección 1 */
+
+
+.section-3 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex: 1;
+  min-height: 0;
+  padding-right: 60px; /* alineación desde el borde derecho */
 }
 
-.social-section p {
-    margin-bottom: 10px;
+.social-section-suscribe {
+  width: 500px;
+  margin-left: auto;
+  text-align: center;
 }
 
-.social-icons {
-    display: flex;
-    justify-content: flex-end;
-    gap: 15px;
+.social-text {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.social-icons img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
+.social-icons-suscribe {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.divider-suscribe {
+  border: none;
+  border-top: 4px solid black;
+  margin: 30px 0;
+  width: 500px;
+}
+
+
+
+.social-icons-suscribe img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  cursor: pointer;
 }
