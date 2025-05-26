@@ -9,6 +9,8 @@ El repositorio FrontEndFerramasDuocUc es la interfaz de usuario del proyecto Fer
 
 1. Clonar el repositorio:
 ```bash
+
+## Explicacion
 🔗 Comunicación con la API
 La aplicación consume servicios desde una API externa, principalmente para:
 
