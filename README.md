@@ -1,5 +1,5 @@
 # Ferramas Frontend
-El repositorio FrontEndFerramasDuocUc es la interfaz de usuario del proyecto Ferramas, desarrollado como parte del curso en Duoc UC. Este frontend se comunica con una API que sigue los principios de Arquitectura Limpia (Clean Architecture), asegurando una separación clara de responsabilidades y facilitando la mantenibilidad y escalabilidad del sistema.
+El  FrontEndFerramasDuocUc es la interfaz de usuario del proyecto Ferramas, desarrollado como parte del curso en Duoc UC. Este frontend se comunica con una API que sigue los principios de Arquitectura Limpia (Clean Architecture), asegurando una separación clara de responsabilidades y facilitando la mantenibilidad y escalabilidad del sistema.
 ## Requisitos
 
 - Node.js v22.14.0
