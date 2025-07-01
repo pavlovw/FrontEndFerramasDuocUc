@@ -18,7 +18,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/productos" element={<ProductsPage />} />  {/* Nueva ruta para mostrar productos */}
         <Route path="/carrito" element={<Carrito />} />
-        <Route path="/webpayrespuesta" element={<WebpayRespuesta />} />
+        <Route path="/webpay-respuesta" element={<WebpayRespuesta />} />
       </Routes>
     </BrowserRouter>
   );

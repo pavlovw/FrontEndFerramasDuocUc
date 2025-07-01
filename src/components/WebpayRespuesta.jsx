@@ -1,7 +1,9 @@
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 
 const WebpayRespuesta = () => {
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
+
   const estado = searchParams.get('estado');
   const orden = searchParams.get('orden');
 
@@ -13,11 +15,31 @@ const WebpayRespuesta = () => {
   };
 
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 20, textAlign: 'center' }}>
       <h1>Resultado del Pago</h1>
-      <p>
-        {mensajes[estado] || `Estado desconocido: ${estado}`} Orden #{orden}
-      </p>
+
+      {estado ? (
+        <p data-testid="resultado-pago">
+          {mensajes[estado] || `Estado desconocido: ${estado}`} Orden #{orden}
+        </p>
+      ) : (
+        <p>Error: No se recibió respuesta de Webpay.</p>
+      )}
+
+      <button
+        style={{
+          marginTop: '20px',
+          padding: '10px 20px',
+          backgroundColor: '#2e8b57',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer'
+        }}
+        onClick={() => navigate('/productos')}
+      >
+        Volver a Productos
+      </button>
     </div>
   );
 };
